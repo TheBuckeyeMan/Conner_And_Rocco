@@ -22,7 +22,7 @@ resource "aws_iam_policy" "sns_publish_policy" {
     Statement = [{
       Effect   = "Allow"
       Action   = "sns:Publish"
-      Resource = aws_sns_topic.daily_notification.arn
+      Resource = data.aws_sns_topic.daily_notification.arn
     }]
   })
 }
